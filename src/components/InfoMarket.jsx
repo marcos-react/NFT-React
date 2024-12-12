@@ -1,4 +1,5 @@
 import React from "react";
+import Women from './../assets/main/women.png';
 
 export default function InfoMarket() {
   return (
@@ -32,7 +33,7 @@ export default function InfoMarket() {
           </div>
         </div>
         <div>
-            <img src="https://gigaland.retro.on3-step.com/img/misc/women-with-vr.png" class="img-fluid"></img>
+            <img src={Women} class="img-fluid" alt="Women VR"></img>
         </div>
       </div>
     </section>
