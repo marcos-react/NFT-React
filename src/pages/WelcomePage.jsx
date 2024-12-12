@@ -1,15 +1,19 @@
-import React from 'react';
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import Header from './../components/Header';
-import Carousel from './../components/Carousel';
-import Card from './../components/Card';
+import InfoMarket from "../components/InfoMarket";
+import OldItem from "../components/OldItem";
+import NewItem from "../components/NewItem";
+import TopSellers from "../components/TopSellers";
 
 export default function WelcomePage() {
   return (
     <div>
-    <Header />
-    <Carousel />
-    <Card />
-  </div>
-  )
+      <main className="container mx-auto px-4">
+        <InfoMarket />
+        <OldItem />
+        <NewItem />
+        <TopSellers />
+      </main>
+    </div>
+  );
 }
