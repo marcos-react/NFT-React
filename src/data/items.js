@@ -28,5 +28,19 @@ export const newItems = [
     image: "https://images.unsplash.com/photo-1580136579312-94651dfd596d?w=500&h=500&fit=crop",
     price: "0.08",
     likes: 55
+  },
+  {
+    id: 5,
+    title: "Flowers",
+    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=500&h=500&fit=crop",
+    price: "0.08",
+    likes: 60
+  },
+  {
+    id: 6,
+    title: "Flowers",
+    image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?w=500&h=500&fit=crop",
+    price: "0.08",
+    likes: 60
   }
 ];

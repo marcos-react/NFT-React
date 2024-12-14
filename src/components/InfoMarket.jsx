@@ -6,7 +6,7 @@ export default function InfoMarket() {
     <section className="py-16 md:px-16 sm:px-8">
       <div className="grid grid-cols-2 gap-6">
         <div>
-          <h1 className="text-l font-bold mb-2">SHIBOSHILAND MARKET</h1>
+          <h1 className="text-l font-bold mb-2">DOGE MARKET</h1>
           <h2 className="text-5xl font-bold mb-4">
             CREATE, SELL OR COLLECT DIGITAL ITEMS.
           </h2>
