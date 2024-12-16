@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./../../firebaseConfig.js";
 import { useNavigate } from "react-router-dom";
-import Header from "../../components/header/header.jsx";
+import Header from "./../components/Header.jsx";
 
 const RegisterFormPage = () => {
   const [email, setEmail] = useState("");
@@ -15,10 +15,10 @@ const RegisterFormPage = () => {
     setError("");
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/nft"); // Redirect to the protected site
+      navigate("/activity"); // Redirect to the protected site
     } catch (err) {
       if (err.code === "auth/email-already-in-use") {
-        setError("This e-mail is not register.");
+        setError("This e-mail is registered.");
       } else {
         setError("Error to register. Try it again.");
       }

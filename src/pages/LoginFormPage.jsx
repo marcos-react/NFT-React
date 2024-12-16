@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./../../firebaseConfig.js";
 import { useNavigate } from "react-router-dom";
-import Header from "../../components/header.jsx";
+import Header from "./../components/Header.jsx";
 
 const LoginFormPage = () => {
   const [email, setEmail] = useState("");
@@ -15,7 +15,7 @@ const LoginFormPage = () => {
     setError("");
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/nft"); // Redirect to protected page
+      navigate("/activity"); // Redirect to protected page
     } catch (err) {
       setError("Error to log in. Check credentials.");
     }
