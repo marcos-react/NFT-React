@@ -1,5 +1,6 @@
 import React, { createContext, useState, useContext } from "react";
 import { newItems } from "./../data/items";
+import { hotCollections } from "./../data/collections";
 
 // Create the context
 const NewItemsContext = createContext();
@@ -27,6 +28,7 @@ export function NewItemsProvider({ children }) {
         startIndex,
         itemsToShow,
         newItems,
+        hotCollections,
         handleNext,
         handlePrevious,
       }}
