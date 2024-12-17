@@ -1,6 +1,8 @@
 import React, { createContext, useState, useContext } from "react";
 import { newItems } from "./../data/items";
 import { hotCollections } from "./../data/collections";
+import { topSellers } from './../data/sellers';
+
 
 // Create the context
 const NewItemsContext = createContext();
@@ -29,6 +31,7 @@ export function NewItemsProvider({ children }) {
         itemsToShow,
         newItems,
         hotCollections,
+        topSellers,
         handleNext,
         handlePrevious,
       }}

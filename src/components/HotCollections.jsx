@@ -5,7 +5,7 @@ import { useNewItems } from "./../Context/NewItemsContext";
 
 
 export default function HotCollections() {
-  const { startIndex, itemsToShow, hotCollections, handleNext, handlePrevious } = useNewItems();
+  const { startIndex, itemsToShow, newItems, hotCollections, topSellers, handleNext, handlePrevious } = useNewItems();
 
   return (
     <section className="py-16 md:px-16 sm:px-8">
