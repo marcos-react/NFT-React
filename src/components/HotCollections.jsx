@@ -2,10 +2,10 @@ import React from "react";
 import NFTCard from "./../components/NftCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useNewItems } from "./../Context/NewItemsContext";
-import { hotCollections } from "../data/collections";
+
 
 export default function HotCollections() {
-  const { startIndex, itemsToShow, HotCollections, handleNext, handlePrevious } = useNewItems();
+  const { startIndex, itemsToShow, hotCollections, handleNext, handlePrevious } = useNewItems();
 
   return (
     <section className="py-16 md:px-16 sm:px-8">
