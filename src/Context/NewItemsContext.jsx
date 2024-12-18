@@ -30,8 +30,8 @@ export function NewItemsProvider({ children }) {
   const loadCollectionData = async (collectionId) => {
     try {
       // Importación dinámica de los archivos de datos
-      const { items } = await import(`./../data/collections/${collectionId}/items.js`);
-      const { sellers } = await import(`./../data/collections/${collectionId}/sellers.js`);
+      const { newItems:items } = await import(`./../data/collections/${collectionId}/items.js`);
+      const { topSellers:sellers } = await import(`./../data/collections/${collectionId}/sellers.js`);
 
       setNewItems(items); // Actualizar newItems
       setTopSellers(sellers); // Actualizar topSellers

@@ -15,10 +15,10 @@ export const newItems = [
     },
     {
       id: 3,
-      title: "Digital Dystopia",
-      image: "https://images.unsplash.com/photo-1506096331550-0fb0d17c805e?w=500&h=500&fit=crop",
-      price: "9.20",
-      likes: 1456
+      title: "Neo-Tokyo Dystopia",
+      image: "https://images.unsplash.com/photo-1579546929518-9e396f3cc809?w=500&h=500&fit=crop",
+      price: "21.75",
+      likes: 3842
     },
     {
       id: 4,
