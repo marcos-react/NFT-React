@@ -3,14 +3,14 @@ import { newItems as defaultItems } from "./../data/items";
 import { topSellers as defaultSellers } from "./../data/sellers";
 import { hotCollections } from "./../data/collections";
 
-// Crear el contexto
+// Create context
 const NewItemsContext = createContext();
 
-// Proveedor del contexto
+// Provider context
 export function NewItemsProvider({ children }) {
   const [startIndex, setStartIndex] = useState(0);
-  const [newItems, setNewItems] = useState(defaultItems); // Inicializado con items.js
-  const [topSellers, setTopSellers] = useState(defaultSellers); // Inicializado con sellers.js
+  const [newItems, setNewItems] = useState(defaultItems); // Inicialize items.js
+  const [topSellers, setTopSellers] = useState(defaultSellers); // Inicialize sellers.js
 
   const itemsToShow = 4;
 
@@ -26,16 +26,16 @@ export function NewItemsProvider({ children }) {
     }
   };
 
-  // Función para cargar nuevos datos según la colección seleccionada
+  // Fuction loadColletionData to select specific collection by ID
   const loadCollectionData = async (collectionId) => {
     try {
-      // Importación dinámica de los archivos de datos
+      // Dinamic import for specific collections items and sellers
       const { newItems:items } = await import(`./../data/collections/${collectionId}/items.js`);
       const { topSellers:sellers } = await import(`./../data/collections/${collectionId}/sellers.js`);
 
-      setNewItems(items); // Actualizar newItems
-      setTopSellers(sellers); // Actualizar topSellers
-      setStartIndex(0); // Reiniciar el índice de paginación
+      setNewItems(items); // Update newItems
+      setTopSellers(sellers); // Update topSellers
+      setStartIndex(0); // Restart index
     } catch (error) {
       console.error("Error loading collection data:", error);
     }
@@ -59,7 +59,7 @@ export function NewItemsProvider({ children }) {
   );
 }
 
-// Hook para usar el contexto
+// Hook for context
 export function useNewItems() {
   return useContext(NewItemsContext);
 }
